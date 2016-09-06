@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+*{padding: 0;margin: 0;list-style:none;}
+div{
+    width: 200px;height: 200px;margin:100px auto;background: red;position:relative;font-size: 50px;line-height: 200px;text-align: center;
+    overflow: hidden;
+}
+span{
+    width: 200px;height: 200px;background: #ccc;position: absolute;left: 0;top:0;
+}
+@-webkit-keyframes demo{
+    from{top:0;}
+	to{top:-200px;}
+}
+span:hover{
+    animation:demo 2s linear infinite;
+}
+    </style>
+    <script>
+// window.onload=function(){
+//     var oS=document.querySelector('span');
+//     oS.onclick=function(){
+//         oS.style.animation="demo 2s linear 1"
+//     }
+// }
+    </script>
+</head>
+<body>
+    <div>
+        嘿嘿嘿
+        <span></span>
+    </div>
+
+</body>
+</html>

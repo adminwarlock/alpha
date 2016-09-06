@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发廊~~！</title>
+    <style>
+*{margin: 0;padding: 0;list-style: none;}
+@keyframes demo{
+    from{left:0;}
+	to{left:-113px;}
+}
+.box{
+    width: 999px;height: 100px;border: solid 2px #000;margin: 100px auto;
+    position:relative; overflow:hidden;
+}
+.dos{
+    width:100%;min-width: 1366px;height:100px;position:absolute; top:0; left:0;
+    background:-webkit-repeating-linear-gradient(-45deg,red 0,red 20px, #fff 20px , #fff 40px, blue 40px, blue 60px, #fff 60px, #fff 80px);
+    animation:demo 2s linear infinite;
+}
+span{font-size: 16px;}
+    </style>
+<script>
+    window.onload=function(){
+        var aInput=document.querySelectorAll('input');
+        var aSpan=document.querySelectorAll('span');
+        var oDos=document.querySelector('.dos');
+        var index=['#ffffff'];
+        aInput[0].onchange=function(){
+                if(aInput[0].value==aInput[1].value||aInput[0].value==index){
+                alert('您选的颜色有重复，请换其他颜色');
+                aInput[0].value=aSpan[0].innerHTML;
+            }else{
+                aSpan[0].innerHTML=aInput[0].value;
+                oDos.style.background='-webkit-repeating-linear-gradient(-45deg,'+aInput[0].value+' 0,'+aInput[0].value+' 20px, #fff 20px , #fff 40px, '+aInput[1].value+' 40px, '+aInput[1].value+' 60px, #fff 60px, #fff 80px)';
+            };
+        };
+        aInput[1].onchange=function(){
+                if(aInput[1].value==aInput[0].value ||aInput[1].value==index){
+                alert('您选的颜色有重复，请换其他颜色');
+                aInput[1].value=aSpan[1].innerHTML;
+            }else{
+                aSpan[1].innerHTML=aInput[1].value;
+                oDos.style.background='-webkit-repeating-linear-gradient(-45deg,'+aInput[0].value+' 0,'+aInput[0].value+' 20px, #fff 20px , #fff 40px, '+aInput[1].value+' 40px,'+aInput[1].value+' 60px, #fff 60px, #fff 80px)';
+            };
+        };
+    };
+</script>
+</head>
+<body>
+    <input type="color" value="#ff0000">
+    <span>#ff0000</span>
+    <br>
+    <input type="color" value="#0000ff">
+    <span>#0000ff</span>
+    <div class="box">
+        <div class="dos"></div>
+    </div>
+</body>
+</html>
