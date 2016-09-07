@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>css3实现iPhone滑动解锁渐变效果</title>
+<title>iPhone解锁</title>
 
 <style>
 p {
@@ -11,13 +11,13 @@ p {
 	line-height: 50px;
 	font-size: 50px;
 	text-align: center;
-	-webkit-background-clip: text;    /*按文字裁剪*/
-	-webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
-	background-color: #19385c;    /*设置一个背景色*/
-	background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);        /*设置渐变的背景，按对角线渐变*/
-	background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-color: #19385c;
+	background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);
+	background-blend-mode: hard-light;
 	background-size: 200%;
-	-webkit-animation: shine 4s infinite;    /*给背景添加动画改变位置*/
+	-webkit-animation: shine 4s infinite;
 }
  @-webkit-keyframes shine {
  from {
@@ -31,7 +31,7 @@ to {
 </head>
 
 <body>
-<p>&gt;&gt;&nbsp;Slide To Unlock</p>
+<p>》》移动滑块解锁</p>
 
 </body>
 </html>
