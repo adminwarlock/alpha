@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		text-align: center;
+	}
+	#go{
+		width: 400px;
+		height: 30px;
+		margin:0 auto;
+		background: #ccc;
+		position:relative;
+	}
+	#go span{
+		position:absolute;
+		top:0;
+		left:0;
+		background: red;
+		height:30px;
+	}
+	</style>
+	<script>
+		window.onload=function(){
+			var oBtn1=document.getElementById('btn1');
+			var oBtn2=document.getElementById('btn2');
+			var oBtn3=document.getElementById('btn3');
+			var oBtn4=document.getElementById('btn4');
+			var oBtn5=document.getElementById('btn5');
+			var oBtn6=document.getElementById('btn6');
+			var oGo=document.getElementById('go');
+			var oSpan=oGo.children[0];
+			var oV=document.getElementById('v1');
+			oBtn1.onclick=function(){
+				// alert(1)
+				oV.play();
+			}
+			oBtn2.onclick=function(){
+				// alert(1)
+				oV.pause();
+			}
+			oBtn3.onclick=function(){
+				// alert(1)
+				oV.volume+=0.2;//范围 0-1
+			}
+			oBtn4.onclick=function(){
+				// alert(1)
+				oV.volume-=0.2;
+			}
+			oBtn5.onclick=function(){
+				// alert(1)
+				oV.currentTime++;
+			}
+			oBtn6.onclick=function(){
+				// alert(1)
+				oV.webkitRequestFullscreen();
+			}
+			oV.ontimeupdate=function(){
+				var scale=oV.currentTime/oV.duration;
+				oSpan.style.width=scale*400+'px';
+			}
+        }
+	</script>
+</head>
+<body>
+	<div>
+		<input type="button" value="播放" id="btn1">
+		<input type="button" value="暂停" id="btn2">
+		<input type="button" value="声音+" id="btn3">
+		<input type="button" value="声音-" id="btn4">
+		<input type="button" value="快进" id="btn5">
+		<input type="button" value="全屏" id="btn6">
+	</div>
+	<video src="1.mp4" width='400' id='v1' poster></video>
+	<div id="go">
+		<span></span>
+	</div>
+</body>
+</html>

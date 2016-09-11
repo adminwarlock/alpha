@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		padding: 0;
+		margin-bottom;
+		text-align: center;
+	}
+	li{list-style: none;}
+	a{
+		text-decoration:none;
+	}
+	a.on{
+		padding-right:20px;
+		background: url(img/play.gif) no-repeat right center;
+	}
+	</style>
+	<script>
+	window.onload=function(){
+		var oBtn1=document.querySelector('#btn1');
+		var oBtn2=document.querySelector('#btn2');
+		var oBtn3=document.querySelector('#btn3');
+		var oBtn4=document.querySelector('#btn4');
+		var aA=document.querySelectorAll('a');
+		var statusplay=0;
+		var oAudio=new Audio();
+		for(var i=0;i<aA.length;i++){
+			aA[i].onclick=function(){
+				for(var i=0;i<aA.length;i++){
+					aA[i].classList.remove('on');
+				}
+				this.classList.add('on');
+				oAudio.src='mp3/'+this.innerHTML+'.mp3';
+				oAudio.play();
+			}
+		}
+		oBtn1.onclick=function(){
+			statusplay=0;
+		}
+		oBtn2.onclick=function(){
+			statusplay=1;
+		}
+		oBtn3.onclick=function(){
+			statusplay=2;
+		}
+		oBtn4.onclick=function(){
+			statusplay=3;
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="button" value="单曲播放" id="btn1">
+	<input type="button" value="顺序播放" id="btn2">
+	<input type="button" value="随机播放" id="btn3">
+	<input type="button" value="列表播放" id="btn4">
+	<ul>
+		<li><a href="javascript:;">隐形纪念</a></li>
+		<li><a href="javascript:;">某某</a></li>
+		<li><a href="javascript:;">耳朵</a></li>
+		<li><a href="javascript:;">烟火(钢琴曲)</a></li>
+		<li><a href="javascript:;">也许</a></li>
+	</ul>
+</body>
+</html>
