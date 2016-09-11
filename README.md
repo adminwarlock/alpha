@@ -21,8 +21,8 @@ NICE!
 <br>
 我的心愿是:
 <br>
-&emsp&emsp——让世界和平！
+&nbsp &nbsp——让世界和平！
 <hr>
 吐槽一下:
 <br>
-&emsp&emsp宽带下行可以达到3M/S；然后上行只有55kb/s，狗x的
+&nbsp &nbsp宽带下行可以达到3M/S；然后上行只有55kb/s，狗x的
