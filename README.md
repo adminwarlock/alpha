@@ -1,23 +1,6 @@
 # alpha
 <br>
-beta 1.1
-<br>
-每天传点小代码
-<br>
-积少成多
-<br>
-NICE!
-<br>
-	--adminwarlock<br>
-	--2016.9
-<hr>
-911
-<br>
-是辆好车
-<br>
-911
-<br>
-也是个令许多人伤心的日子
+此目录改为放一些HTML5/CSS3的特效展示
 <br>
 我的心愿是:
 <br>
@@ -25,4 +8,4 @@ NICE!
 <hr>
 吐槽一下:
 <br>
-&nbsp &nbsp宽带下行可以达到3M/S；然后上行只有55kb/s，狗x的
+&nbsp &nbsp宽带下行可以达到3M/S；然后上行只有55kb/s，狗x的电信
